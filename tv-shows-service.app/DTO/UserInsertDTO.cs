@@ -17,12 +17,12 @@ namespace tv_shows_service.app.DTO
         public string LastName { get; set; }
 
         [Required(ErrorMessage = "Email is required"),
-        EmailAddress(ErrorMessage = "Invalid email value"),
+        EmailAddress(ErrorMessage ="Invalid email value"),
         MaxLength(70, ErrorMessage = "Maximum length for email is 70")]
         public string Email { get; set; }
 
         [Required(ErrorMessage = "Username is required"),
-        MinLength(6, ErrorMessage = "Minimum length for username is 6"),
+        MinLength(6,ErrorMessage = "Minimum length for username is 6"),
         MaxLength(30, ErrorMessage = "Maximum length for username name is 30")]
         public string Username { get; set; }
 
