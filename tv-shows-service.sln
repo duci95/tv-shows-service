@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tv-shows-service.domain", "tv-shows-service.domain\tv-shows-service.domain.csproj", "{D787B7ED-14EF-4886-9CC5-2A23BE0AC627}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tv-shows-service.efc-data-access", "tv-shows-service.efc-data-access\tv-shows-service.efc-data-access.csproj", "{AFCED7FE-BECF-4C2F-B7DF-B199AAB8D143}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "tv-shows-service.app", "tv-shows-service.app\tv-shows-service.app.csproj", "{7985B7AF-5B0D-44AE-B76A-F44080B050C3}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCImplementation", "EFCImplementation\EFCImplementation.csproj", "{44A8AA2F-407B-4BC8-8B0D-E54C0443795D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tv-shows-service.api", "tv-shows-service.api\tv-shows-service.api.csproj", "{350B4329-DDE9-4D89-A6B4-3A5FB219CB0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D787B7ED-14EF-4886-9CC5-2A23BE0AC627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D787B7ED-14EF-4886-9CC5-2A23BE0AC627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D787B7ED-14EF-4886-9CC5-2A23BE0AC627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D787B7ED-14EF-4886-9CC5-2A23BE0AC627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFCED7FE-BECF-4C2F-B7DF-B199AAB8D143}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFCED7FE-BECF-4C2F-B7DF-B199AAB8D143}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFCED7FE-BECF-4C2F-B7DF-B199AAB8D143}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFCED7FE-BECF-4C2F-B7DF-B199AAB8D143}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7985B7AF-5B0D-44AE-B76A-F44080B050C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7985B7AF-5B0D-44AE-B76A-F44080B050C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7985B7AF-5B0D-44AE-B76A-F44080B050C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7985B7AF-5B0D-44AE-B76A-F44080B050C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44A8AA2F-407B-4BC8-8B0D-E54C0443795D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44A8AA2F-407B-4BC8-8B0D-E54C0443795D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44A8AA2F-407B-4BC8-8B0D-E54C0443795D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44A8AA2F-407B-4BC8-8B0D-E54C0443795D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{350B4329-DDE9-4D89-A6B4-3A5FB219CB0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{350B4329-DDE9-4D89-A6B4-3A5FB219CB0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{350B4329-DDE9-4D89-A6B4-3A5FB219CB0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{350B4329-DDE9-4D89-A6B4-3A5FB219CB0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9A1F4FDE-2E19-4A56-A13B-FC941E49825F}
+	EndGlobalSection
+EndGlobal
