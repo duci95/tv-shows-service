@@ -13,7 +13,7 @@ namespace EFCImplementation.User
         {
         }
 
-        public void Execute(UserDTO request)
+        public void Execute(UserInsertDTO request)
         {
             if(Context.Users.Any(u => u.Username == request.Username))
             {
@@ -25,23 +25,14 @@ namespace EFCImplementation.User
                 throw new UniqueConstraintFailedException();
             }
 
-            if(request.Password != request.PasswordRepeat)
-            {
-                throw new PasswordCheckFailedException();
-            }
-
-            string hashedPassword = BCrypt.Net.BCrypt.EnhancedHashPassword(request.Password);
-
-            string token = BCrypt.Net.BCrypt.EnhancedHashPassword(request.Email + request.Password);
-
             Context.Users.Add(new domain.User
             {
                 FirstName = request.FirstName,
                 LastName = request.LastName,
                 Email = request.Email,
                 Username = request.Username,
-                Password = hashedPassword,
-                Token = token
+                Password = BCrypt.Net.BCrypt.EnhancedHashPassword(request.Password),
+                Token = BCrypt.Net.BCrypt.EnhancedHashPassword(request.Email + request.Password)
             });
 
             Context.SaveChanges();

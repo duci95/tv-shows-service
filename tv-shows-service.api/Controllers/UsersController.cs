@@ -45,28 +45,24 @@ namespace tv_shows_service.api.Controllers
         {
             try
             {
-                var json = (JObject)JsonConvert.DeserializeObject(user.ToString());
+                UserInsertDTO userDTO = JsonConvert.DeserializeObject<UserInsertDTO>(user.ToString());
 
-                UserDTO userDTO = new UserDTO
+                if (!TryValidateModel(userDTO))
                 {
-                    Email = (string)json["email"],
-                    FirstName = (string)json["firstname"],
-                    LastName = (string)json["lastname"],
-                    Username = (string)json["username"],
-                    Password = (string)json["password"],
-                    PasswordRepeat = (string)json["passwordRepeat"]
-                };
+                    return BadRequest();
+                }
 
-                _addUserInterface.Execute(userDTO);
                 return StatusCode(201);
+
             }
             catch (UniqueConstraintFailedException)
             {
-                return StatusCode(422, "Validation error!");
+                return StatusCode(422, "Values already exists!");
             }
+               
             catch (Exception)
             {
-                return StatusCode(500);
+                return StatusCode(500, "Server is currently under construction, try later.");
             }
         }
 

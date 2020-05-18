@@ -1,12 +1,12 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 namespace tv_shows_service.app.DTO
 {
-    public class UserDTO
+    public class UserInsertDTO
     {
-        public int Id { get; set; }
-
-        [Required(ErrorMessage = "First name is required"), 
+        [Required(ErrorMessage = "First name is required"),
         MinLength(2, ErrorMessage = "Minimum length for first name is 2"),
         MaxLength(30, ErrorMessage = "Maximum length for first name is 30")]
         public string FirstName { get; set; }
@@ -31,10 +31,7 @@ namespace tv_shows_service.app.DTO
         MaxLength(50, ErrorMessage = "Maximum length for password is 25")]
         public string Password { get; set; }
 
-        [Required]
+        [Required, Compare("Password")]
         public string PasswordRepeat { get; set; }
-
-        [Required]
-        public string Token { get; set; }
     }
 }
