@@ -52,6 +52,7 @@ namespace tv_shows_service.api.Controllers
                     return BadRequest();
                 }
 
+                _addUserInterface.Execute(userDTO);
                 return StatusCode(201);
 
             }
@@ -62,7 +63,7 @@ namespace tv_shows_service.api.Controllers
                
             catch (Exception)
             {
-                return StatusCode(500, "Server is currently under construction, try later.");
+                return StatusCode(500);
             }
         }
 
