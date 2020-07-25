@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
+using TVShowsService.App.DTO.Shows;
 using TVShowsService.App.Interfaces.Commands.Show;
+using TVShowsService.App.Searchs;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -20,9 +22,10 @@ namespace TVShowsService.API.Controllers
 
         // GET: api/<ShowsController>
         [HttpGet]
-        public IActionResult Get([FromQuery] Object shows)
+        public IActionResult Get([FromQuery] ShowSearch shows)
         {
-            return Ok(shows);
+            var data = _getShowsInterface.Execute(shows);
+            return Ok(data);
         }
 
         // GET api/<ShowsController>/5

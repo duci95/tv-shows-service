@@ -1,4 +1,5 @@
 ﻿using EFCImplementation;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +17,6 @@ namespace TVShowsService.EFCImplementation.Show
         public EFCGetShowsImplementation(TVShowsServiceContext context) : base(context)
         {
         }
-
 
         public Pagination<ShowGetDTO> Execute(ShowSearch request)
         {
