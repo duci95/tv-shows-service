@@ -9,5 +9,8 @@
         public string LastName { get; set; }
         public string Token { get; set; }
         public bool IsActive { get; set; }
+        public string ProfilePicture { get; set; }
+
+        public Role Role { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using TVShowsService.App.DTO.Shows;
 using TVShowsService.App.Searchs;
 

@@ -5,8 +5,8 @@
         void Execute(Request request);
     }
 
-    public interface ICommand<Request, Response>
+    public  interface ICommand<Request, Response>
     {
-        Response Execute(Request request);
+       Response Execute (Request request);
     }
 }
