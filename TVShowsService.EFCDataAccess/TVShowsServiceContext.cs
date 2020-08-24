@@ -24,6 +24,7 @@ namespace TVShowsService.EFCDataAccess
             modelBuilder.ApplyConfiguration(new RoleConfiguration());
             modelBuilder.ApplyConfiguration(new CategoryConfiguration());
             modelBuilder.ApplyConfiguration(new PictureConfiguration());
+            modelBuilder.ApplyConfiguration(new CommentConfiguration());
         }
     }
 }

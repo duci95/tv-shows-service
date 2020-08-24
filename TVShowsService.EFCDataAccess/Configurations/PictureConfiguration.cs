@@ -12,8 +12,8 @@ namespace TVShowsService.EFCDataAccess.Configurations
         public void Configure(EntityTypeBuilder<Picture> builder)
         {
             builder.Property(p => p.PicturePath).IsRequired();
-            builder.Property(s => s.CreatedAt).HasDefaultValueSql("GETDATE()");
-            builder.Property(s => s.IsDeleted).HasDefaultValue(false);
+            builder.Property(p => p.CreatedAt).HasDefaultValueSql("GETDATE()");
+            builder.Property(p => p.IsDeleted).HasDefaultValue(false);
         }
     }
 }

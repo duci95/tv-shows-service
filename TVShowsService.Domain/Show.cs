@@ -10,5 +10,6 @@ namespace TVShowsService.Domain
         public int Likes { get; set; }
         public int Dislikes { get; set; }
         public Category Category { get; set; }
+        public ICollection<Comment> Comments { get; set; }
     }
 }

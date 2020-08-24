@@ -7,13 +7,13 @@ using TVShowsService.Domain;
 
 namespace TVShowsService.EFCDataAccess.Configurations
 {
-    public class CategoryConfiguration : IEntityTypeConfiguration<Category>
+    public class CommentConfiguration : IEntityTypeConfiguration<Comment>
     {
-        public void Configure(EntityTypeBuilder<Category> builder)
+        public void Configure(EntityTypeBuilder<Comment> builder)
         {
-            builder.Property(c => c.CategoryName).IsRequired();
+            builder.Property(c => c.CommentText).IsRequired();
             builder.Property(c => c.CreatedAt).HasDefaultValueSql("GETDATE()");
-            builder.Property(c => c.IsDeleted).HasDefaultValue(false);
+            builder.Property(c => c.IsDeleted).HasDefaultValue(false);           
         }
     }
 }

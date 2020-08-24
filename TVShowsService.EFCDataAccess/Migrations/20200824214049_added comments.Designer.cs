@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TVShowsService.EFCDataAccess;
 
 namespace TVShowsService.EFCDataAccess.Migrations
 {
     [DbContext(typeof(TVShowsServiceContext))]
-    partial class TVShowsServiceContextModelSnapshot : ModelSnapshot
+    [Migration("20200824214049_added comments")]
+    partial class addedcomments
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -217,9 +219,7 @@ namespace TVShowsService.EFCDataAccess.Migrations
                         .HasDefaultValue(false);
 
                     b.Property<bool>("IsBanned")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("bit")
-                        .HasDefaultValue(false);
+                        .HasColumnType("bit");
 
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()

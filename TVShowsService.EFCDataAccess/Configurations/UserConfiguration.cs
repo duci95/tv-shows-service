@@ -22,6 +22,7 @@ namespace TVShowsService.EFCDataAccess.Configurations
             builder.Property(u => u.IsDeleted).HasDefaultValue(false);
 
             builder.Property(u => u.IsActive).HasDefaultValue(false);
+            builder.Property(u => u.IsBanned).HasDefaultValue(false);
         }
     }
 }
