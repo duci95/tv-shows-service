@@ -19,8 +19,6 @@ namespace TVShowsService.API.Controllers
             _addUserInterface = addUserInterface;
         }
 
-
-
         // GET: api/Users
         [HttpGet]
         public IEnumerable<string> Get()
@@ -38,18 +36,16 @@ namespace TVShowsService.API.Controllers
         // POST: api/Users
 
         [HttpPost]
-        public ActionResult Post([FromBody] Object user)
+        public ActionResult Post([FromBody] UserInsertDTO user)
         {
             try
-            {
-                UserInsertDTO userDTO = JsonConvert.DeserializeObject<UserInsertDTO>(user.ToString());
-
-                if (!TryValidateModel(userDTO))
+            { 
+                if (!TryValidateModel(user))
                 {
                     return BadRequest();
                 }
 
-                _addUserInterface.Execute(userDTO);
+                _addUserInterface.Execute(user);
                 return StatusCode(201);
 
             }

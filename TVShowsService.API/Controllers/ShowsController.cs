@@ -25,7 +25,7 @@ namespace TVShowsService.API.Controllers
         public IActionResult Get([FromQuery] ShowSearch shows)
         {
             var data = _getShowsInterface.Execute(shows);
-            return Ok(shows);
+            return Ok(data);
         }
 
         // GET api/<ShowsController>/5
